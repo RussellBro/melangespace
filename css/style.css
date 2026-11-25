@@ -468,3 +468,6 @@ main:has(.story) + .footer .footer-inner { border-top: 1px solid var(--line); pa
 .role-main { display: flex; flex-direction: column; gap: 6px; }
 .role-meta { display: block; white-space: normal; }
 @media (max-width: 820px) { .role-meta { display: block; font-size: .84rem; } }
+
+/* Careers before roles are public */
+.lede { font-size: 1.05rem; color: var(--ink-soft); max-width: 460px; margin-bottom: 22px; }

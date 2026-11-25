@@ -115,6 +115,9 @@ LOC = "Los Angeles, CA (El Segundo for now). On site, full time"
 # Set PROPULSION = False to drop that row if Russell says no.
 PROPULSION = True
 
+# HOLD: the role list goes public only on Russell's Dover preview and go (hiring fork). Flip to True then.
+ROLES_PUBLIC = False
+
 def role(title, subject, extra=""):
     return f"""        <li><a href="{MAIL}?subject={subject}">
           <span class="role-main">
@@ -130,6 +133,14 @@ ROLES = "\n".join(r for r in [
     role("Founding Engineer, Propulsion", "Founding%20Engineer%2C%20Propulsion") if PROPULSION else None,
     role("Chief Scientist", "Chief%20Scientist", ", with field days"),
 ] if r)
+
+ROLES_BLOCK = (f"""      <ul class="roles">
+{ROLES}
+      </ul>
+      <p class="fine">All roles are on site in Los Angeles (El Segundo for now) and require being a U.S. person as defined by ITAR. Don't see your role? <a href="{MAIL}">russell@melangespace.com</a></p>""" if ROLES_PUBLIC else
+f"""      <p class="lede">Open roles are posted here soon. If you want in now, write to us.</p>
+      <a class="btn" href="{MAIL}?subject=Careers">Get in touch</a>
+      <p class="fine">All roles are on site in Los Angeles (El Segundo for now) and require being a U.S. person as defined by ITAR.</p>""")
 
 PAGES = {
     "index.html": dict(
@@ -184,10 +195,7 @@ PAGES = {
       <h2 class="statement">We're hiring the first team. Come build the probes that map what's under the&nbsp;Moon.</h2>
     </div>
     <div class="reveal">
-      <ul class="roles">
-{ROLES}
-      </ul>
-      <p class="fine">All roles are on site in Los Angeles (El Segundo for now) and require being a U.S. person as defined by ITAR. Don't see your role? <a href="{MAIL}">russell@melangespace.com</a></p>
+{ROLES_BLOCK}
     </div>
   </section>
 """,
