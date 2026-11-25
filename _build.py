@@ -110,12 +110,11 @@ MAIL = "mailto:russell@melangespace.com"
 
 LOC = "Los Angeles, CA (El Segundo for now). On site, full time"
 
-# Roles match Dover (hiring fork, 24 Nov 2026). HOLD: nothing public until Russell previews in Dover and says go.
-# Links are mailto placeholders until the Dover apply pages are active.
+# Roles match the jobs in Dover.
 # Set PROPULSION = False to drop that row if Russell says no.
 PROPULSION = True
 
-# HOLD: the role list goes public only on Russell's Dover preview and go (hiring fork). Flip to True then.
+# False shows a get-in-touch line instead of the role list.
 ROLES_PUBLIC = True
 
 DOVER = "https://jobs.dover.com/melange-space/{}?rs=76643084"
