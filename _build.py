@@ -116,10 +116,12 @@ LOC = "Los Angeles, CA (El Segundo for now). On site, full time"
 PROPULSION = True
 
 # HOLD: the role list goes public only on Russell's Dover preview and go (hiring fork). Flip to True then.
-ROLES_PUBLIC = False
+ROLES_PUBLIC = True
 
-def role(title, subject, extra=""):
-    return f"""        <li><a href="{MAIL}?subject={subject}">
+DOVER = "https://jobs.dover.com/melange-space/{}?rs=76643084"
+
+def role(title, job_id, extra=""):
+    return f"""        <li><a href="{DOVER.format(job_id)}" target="_blank" rel="noopener">
           <span class="role-main">
             <span class="role-title">{title}</span>
             <span class="role-meta">{LOC}{extra}.</span>
@@ -128,10 +130,10 @@ def role(title, subject, extra=""):
         </a></li>"""
 
 ROLES = "\n".join(r for r in [
-    role("Founding Engineer, Hardware Lead", "Founding%20Engineer%2C%20Hardware%20Lead"),
-    role("Founding Engineer, Embedded Systems and Avionics", "Founding%20Engineer%2C%20Embedded%20Systems%20and%20Avionics"),
-    role("Founding Engineer, Propulsion", "Founding%20Engineer%2C%20Propulsion") if PROPULSION else None,
-    role("Chief Scientist", "Chief%20Scientist", ", with field days"),
+    role("Founding Engineer, Hardware Lead", "e6afbe92-c193-4be4-a8cf-61b1b5f1ea4c"),
+    role("Founding Engineer, Embedded Systems and Avionics", "00bdcb62-77d0-486d-be81-261ad28282ca"),
+    role("Founding Engineer, Propulsion", "9165eea7-a168-4c66-b238-9b546dbfb7a9") if PROPULSION else None,
+    role("Chief Scientist", "2d2de82a-98d6-43dc-98d0-9a949d49e26b", ", with field days"),
 ] if r)
 
 ROLES_BLOCK = (f"""      <ul class="roles">
