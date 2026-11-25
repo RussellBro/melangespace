@@ -134,16 +134,15 @@ ROLES = "\n".join(r for r in [
 PAGES = {
     "index.html": dict(
         title="Melange Space", path="",
-        desc="Melange Space is building the first industry beyond Earth. It starts by knowing what lies beneath the surface of the Moon.",
+        desc="Water on the Moon is rocket fuel. Melange Space maps what lies beneath the lunar surface, the first step to building the first industry beyond Earth.",
         extra_head=ORG, short="", label="Melange Space", ruled="",
-        copy="""        <p class="eyebrow-line rise" style="--d:.15s">It starts by knowing what lies beneath the surface</p>
-        <h1 class="display rise" style="--d:.3s">Building the first industry beyond&nbsp;Earth</h1>""",
+        copy="""        <h1 class="display rise" style="--d:.15s">Building the first industry beyond&nbsp;Earth</h1>""",
         body="""
   <section class="story" id="story">
 
     <div class="beat beat-solo reveal">
       <p class="tag"><span class="dot"></span>The rush</p>
-      <h2 class="statement">Water on the Moon is rocket fuel. The first to find it and mine it will hold the keys to deep space and everything in it. A gold rush is coming, and this time the gold is&nbsp;water.</h2>
+      <h2 class="statement">Water on the Moon is rocket fuel. The first to find it will hold the keys to deep space. Water is the oil of space, and the rush for it is&nbsp;coming.</h2>
     </div>
 
     <div class="beat reveal">
