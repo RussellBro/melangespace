@@ -152,14 +152,12 @@ PAGES = {
   <section class="story" id="story">
 
     <div class="beat beat-solo reveal">
-      <p class="tag"><span class="dot"></span>The rush</p>
-      <h2 class="statement">Water on the Moon is rocket fuel. The first to find it will hold the keys to deep space. Water is the oil of space, and the rush for it is&nbsp;coming.</h2>
+      <h2 class="statement">Water on the Moon is rocket fuel. The first to find it will hold the keys to deep space. A gold rush is coming, and this time the gold is&nbsp;water.</h2>
     </div>
 
     <div class="beat reveal">
       <div class="beat-text">
-        <p class="tag"><span class="dot"></span>Where we start</p>
-        <h2 class="statement">But first, we must map. Thousands of penetrator probes chart water, resources and ground strength across a whole site, so whoever builds there knows what they're standing&nbsp;on.</h2>
+        <h2 class="statement">But first, we must map. Thousands of penetrator probes chart water, resources, and critical data for infrastructure and&nbsp;industry.</h2>
       </div>
       <figure class="shot shot-wide"><img src="assets/field-drone.jpg" alt="A drone carrying the Melange test probe over a lake and desert hills" loading="lazy" width="1600" height="1000"></figure>
     </div>
@@ -167,13 +165,11 @@ PAGES = {
     <div class="proof reveal">
       <figure class="shot shot-tall"><img src="assets/field-probe.jpg" alt="The Melange test probe standing in the ground after a drop" loading="lazy" width="1000" height="1250"></figure>
       <div class="proof-text">
-        <p class="tag"><span class="dot"></span>26 October 2026</p>
         <h2 class="statement">We dropped our probe 20 times from the maximum commercial drone height, and the airframe and the electronics inside survived every&nbsp;time.</h2>
       </div>
     </div>
 
     <div class="closer reveal">
-      <p class="tag"><span class="dot"></span>Our bet</p>
       <h2 class="statement">We must look before we&nbsp;leap.<br>And only then will the spice&nbsp;flow.</h2>
       <div class="actions">
         <a class="btn" href="careers.html">Join us</a>
