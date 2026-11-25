@@ -444,3 +444,9 @@ main:has(.story) + .footer .footer-inner { border-top: 1px solid var(--line); pa
 .closer .statement { max-width: 30ch; font-size: clamp(2rem, 4.2vw, 4rem); line-height: 1.1; }
 .closer .actions { justify-content: center; }
 @media (max-width: 820px) { .closer { padding: 84px 0 64px; } }
+
+/* Careers rows: title with the location line under it */
+.roles a { grid-template-columns: 1fr 24px; }
+.role-main { display: flex; flex-direction: column; gap: 6px; }
+.role-meta { display: block; white-space: normal; }
+@media (max-width: 820px) { .role-meta { display: block; font-size: .84rem; } }

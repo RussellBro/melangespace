@@ -108,12 +108,28 @@ ORG = """
 
 MAIL = "mailto:russell@melangespace.com"
 
-def role(title, subject):
+LOC = "Los Angeles, CA (El Segundo for now). On site, full time"
+
+# Roles match Dover (hiring fork, 24 Nov 2026). HOLD: nothing public until Russell previews in Dover and says go.
+# Links are mailto placeholders until the Dover apply pages are active.
+# Set PROPULSION = False to drop that row if Russell says no.
+PROPULSION = True
+
+def role(title, subject, extra=""):
     return f"""        <li><a href="{MAIL}?subject={subject}">
-          <span class="role-title">{title}</span>
-          <span class="role-meta">Los Angeles</span>
+          <span class="role-main">
+            <span class="role-title">{title}</span>
+            <span class="role-meta">{LOC}{extra}.</span>
+          </span>
           <span class="arrow" aria-hidden="true">&rarr;</span>
         </a></li>"""
+
+ROLES = "\n".join(r for r in [
+    role("Founding Engineer, Hardware Lead", "Founding%20Engineer%2C%20Hardware%20Lead"),
+    role("Founding Engineer, Embedded Systems and Avionics", "Founding%20Engineer%2C%20Embedded%20Systems%20and%20Avionics"),
+    role("Founding Engineer, Propulsion", "Founding%20Engineer%2C%20Propulsion") if PROPULSION else None,
+    role("Chief Scientist", "Chief%20Scientist", ", with field days"),
+] if r)
 
 PAGES = {
     "index.html": dict(
@@ -170,11 +186,9 @@ PAGES = {
     </div>
     <div class="reveal">
       <ul class="roles">
-{role("Chief Technology Officer", "CTO")}
-{role("Chief Scientist", "Chief%20Scientist")}
-{role("Founding Engineer, Embedded Systems and Avionics", "Founding%20Engineer%2C%20Embedded%20Systems%20and%20Avionics")}
+{ROLES}
       </ul>
-      <p class="fine">All roles are on site in Los Angeles and require being a U.S. person as defined by ITAR. Don't see your role? <a href="{MAIL}">russell@melangespace.com</a></p>
+      <p class="fine">All roles are on site in Los Angeles (El Segundo for now) and require being a U.S. person as defined by ITAR. Don't see your role? <a href="{MAIL}">russell@melangespace.com</a></p>
     </div>
   </section>
 """,
